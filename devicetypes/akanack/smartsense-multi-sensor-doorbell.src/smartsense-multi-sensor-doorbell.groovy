@@ -12,6 +12,10 @@
  *  on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
  *  for the specific language governing permissions and limitations under the License.
  *
+ *  Updates:
+ *  -------
+ *  2016-09-19 : Initial commit to GitHub.
+ *
  */
 
 metadata {
@@ -90,7 +94,7 @@ metadata {
 			state("inactive", label:'${name}', icon:"st.motion.acceleration.inactive", backgroundColor:"#79b821")
 		}
 		valueTile("temperature", "device.temperature", width: 2, height: 2) {
-			state("temperature", label:'${currentValue}Â°',
+			state("temperature", label:'${currentValue}°',
 				backgroundColors:[
 					[value: 31, color: "#153591"],
 					[value: 44, color: "#1e9cbb"],
@@ -361,7 +365,7 @@ private Map getTemperatureResult(value) {
 		def v = value as int
 		value = v + offset
 	}
-	def descriptionText = "${linkText} was ${value}Â°${temperatureScale}"
+	def descriptionText = "${linkText} was ${value}°${temperatureScale}"
 	return [
 	name: 'temperature',
 	value: value,
