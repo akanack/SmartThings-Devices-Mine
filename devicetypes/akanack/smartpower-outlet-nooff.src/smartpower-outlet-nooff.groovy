@@ -116,7 +116,7 @@ def parse(String description) {
 }
 
 def off() {
-// Mopdified to make sure outlet always stays on.
+// Mopdified to make sure outlet always stays on.  Can still be turned off on physical device
 //	zigbee.off()
 	zigbee.on()
 }
